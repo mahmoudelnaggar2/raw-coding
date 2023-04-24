@@ -1,0 +1,39 @@
+<fn name="main" parameters="n">
+    <fn name="fizzbuzz" parameters="number">
+        <if>
+            <eq>
+                <mod>
+                    <number/>
+                    3
+                </mod>
+                0
+            </eq>
+            <if>
+                <eq>
+                    <mod>
+                        <number/>
+                        5
+                    </mod>
+                    0
+                </eq>
+                <return>Fizz Buzz</return>
+            </if>
+            <return>Fizz</return>
+        </if>
+        <if>
+            <eq>
+                <mod>
+                    <number/>
+                    5
+                </mod>
+                0
+            </eq>
+            <return>Buzz</return>
+        </if>
+    </fn>
+    <print>
+        <fizzbuzz>
+            <n/>
+        </fizzbuzz>
+    </print>
+</fn>

@@ -1,0 +1,107 @@
+[
+    {
+        "name": "PNY Nvidia Quadro T1000 Graphics Card - 4GB GDDR6 - 896 CUDA Core",
+        "url": "https://www.overclockers.co.uk/pny-nvidia-quadro-t1000-graphics-card-4gb-gddr6-896-cuda-core-gx-075-pn.html",
+        "price": 34166,
+        "stock": -2,
+        "stock_type": "bought_to_order"
+    },
+    {
+        "name": "Asus NVIDIA GeForce GT 1030 LP Silent 2048MB DDR4 PCI-Express Graphics Card",
+        "url": "https://www.overclockers.co.uk/asus-nvidia-geforce-gt-1030-lp-silent-2048mb-ddr4-pci-express-graphics-card-gx-47l-as.html",
+        "price": 6666,
+        "stock": -2,
+        "stock_type": "coming_soon"
+    },
+    {
+        "name": "Palit NVIDIA GeForce GT 1030 2048MB DDR4 PCI-Express Graphics Card",
+        "url": "https://www.overclockers.co.uk/palit-nvidia-geforce-gt-1030-2048mb-ddr4-pci-express-graphics-card-gx-06f-pl.html",
+        "price": 7499,
+        "stock": 24,
+        "stock_type": "available"
+    },
+    {
+        "name": "PNY Nvidia Quadro RTX A4000 Graphics Card  - 16GB GDDR6 - 6144 CUDA Core",
+        "url": "https://www.overclockers.co.uk/pny-nvidia-quadro-rtx-a4000-graphics-card-16gb-gddr6-6144-cuda-core-gx-06u-pn.html",
+        "price": 105829,
+        "stock": 0,
+        "stock_type": "bought_to_order"
+    },
+    {
+        "name": "Raijintek Morpheus 8057 Heatpipe VGA Cooler For Nvidia RTX and Radeon RX - Black",
+        "url": "https://www.overclockers.co.uk/raijintek-morpheus-8057-heatpipe-vga-cooler-for-nvidia-rtx-and-radeon-rx-black-hs-03g-rt.html",
+        "price": 5416,
+        "stock": 16,
+        "stock_type": "available"
+    },
+    {
+        "name": "PNY Nvidia Quadro RTX 8000 Graphics Card - 48GB GDDR6 - 4608 CUDA Core",
+        "url": "https://www.overclockers.co.uk/pny-nvidia-quadro-rtx-8000-graphics-card-48gb-gddr6-4608-cuda-core-gx-01x-nv.html",
+        "price": 562999,
+        "stock": 0,
+        "stock_type": "bought_to_order"
+    },
+    {
+        "name": "PNY Nvidia Quadro RTX 6000 Graphics Card - 24GB GDDR6 - 4608 CUDA Core",
+        "url": "https://www.overclockers.co.uk/pny-nvidia-quadro-rtx-6000-graphics-card-24gb-gddr6-4608-cuda-core-gx-060-pn.html",
+        "price": 381666,
+        "stock": 0,
+        "stock_type": "bought_to_order"
+    },
+    {
+        "name": "PNY Nvidia Quadro RTX 5000 Graphics Card - 16GB GDDR6 - 3072 CUDA Core",
+        "url": "https://www.overclockers.co.uk/pny-nvidia-quadro-rtx-5000-graphics-card-16gb-gddr6-3072-cuda-core-gx-05z-pn.html",
+        "price": 199166,
+        "stock": 0,
+        "stock_type": "bought_to_order"
+    },
+    {
+        "name": "PNY Nvidia Quadro RTX 4000 Graphics Card - 8GB GDDR6 - 2304 CUDA Core",
+        "url": "https://www.overclockers.co.uk/pny-nvidia-quadro-rtx-4000-graphics-card-8gb-gddr6-2304-cuda-core-gx-05y-pn.html",
+        "price": 89166,
+        "stock": 0,
+        "stock_type": "bought_to_order"
+    },
+    {
+        "name": "PNY Nvidia Quadro P620 DP Low Profile Graphics Card - 2GB GDDR5 - 512 CUDA Core",
+        "url": "https://www.overclockers.co.uk/pny-nvidia-quadro-p620-dp-low-profile-graphics-card-2gb-gddr5-512-cuda-core-gx-05v-pn.html",
+        "price": 19166,
+        "stock": 0,
+        "stock_type": "bought_to_order"
+    },
+    {
+        "name": "PNY Nvidia Quadro P400 DVI Low Profile Graphics Card - 2GB GDDR5 - 256 CUDA Core",
+        "url": "https://www.overclockers.co.uk/pny-nvidia-quadro-p400-dvi-low-profile-graphics-card-2gb-gddr5-256-cuda-core-gx-05j-pn.html",
+        "price": 11666,
+        "stock": 0,
+        "stock_type": "bought_to_order"
+    },
+    {
+        "name": "NVIDIA GeForce GTX SLI HB Bridge 4-Slot (L380218)",
+        "url": "https://www.overclockers.co.uk/nvidia-geforce-gtx-sli-hb-bridge-4-slot-l380218-gx-015-nv.html",
+        "price": 3249,
+        "stock": 0,
+        "stock_type": "preorder"
+    },
+    {
+        "name": "NVIDIA GeForce GTX SLI HB Bridge 2-Slot (L380220)",
+        "url": "https://www.overclockers.co.uk/nvidia-geforce-gtx-sli-hb-bridge-2-slot-l380220-gx-014-nv.html",
+        "price": 3249,
+        "stock": 0,
+        "stock_type": "out_of_stock"
+    },
+    {
+        "name": "MSI NVIDIA GeForce GT 1030 Aero ITX OC 2048MB DDR4 PCI-Express Graphics Card",
+        "url": "https://www.overclockers.co.uk/msi-nvidia-geforce-gt-1030-aero-itx-oc-2048mb-ddr4-pci-express-graphics-card-gc-00j-ms.html",
+        "price": 6666,
+        "stock": 0,
+        "stock_type": "coming_soon"
+    },
+    {
+        "name": "MSI NVIDIA GeForce GT 1030 LP OC 2048MB DDR4 PCI-Express Graphics Card",
+        "url": "https://www.overclockers.co.uk/msi-nvidia-geforce-gt-1030-lp-oc-2048mb-ddr4-pci-express-graphics-card-gx-37h-ms.html",
+        "price": 6249,
+        "stock": 0,
+        "stock_type": "coming_soon"
+    }
+]

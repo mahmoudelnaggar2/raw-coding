@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <button onclick="createObject()">Create</button>
+    <button onclick="gc()">gc</button>
+</div>
+<div>
+    <ul id="table">
+
+    </ul>
+</div>
+<script>
+    const memoryTable = {}
+    const table = document.getElementById("table");
+
+    function createObject() {
+        return fetch("/create", {method: 'post'}).then(syncTable)
+    }
+
+    function gc() {
+        document.querySelectorAll('.menu').forEach(m => m.remove())
+        return fetch("/gc", {method: 'post'}).then(syncTable)
+    }
+
+    function syncTable() {
+        return fetch("/table")
+            .then(r => r.json())
+            .then(tbl => {
+                    while (table.firstChild) table.removeChild(table.lastChild);
+
+                    Object.keys(tbl).forEach(id => {
+                        memoryTable[id] = tbl[id]
+
+                        const li = document.createElement("li")
+                        li.innerText = id
+                        const inspectObjectFn = inspectObject(id)
+                        li.addEventListener("click", inspectObjectFn)
+                        table.append(li)
+
+                        const existingMenu = document.getElementById('menu-' + id)
+                        if (existingMenu) inspectObjectFn()
+                    })
+                }
+            )
+    }
+
+    function createMemberRow(obj, key) {
+        const member = document.createElement("tr")
+
+        const col1 = document.createElement("td")
+        const keyInput = document.createElement("input")
+        keyInput.value = obj.fields[key].name
+        col1.append(keyInput)
+
+        const col2 = document.createElement("td")
+        const valueInput = document.createElement(obj.fields[key].type === "textarea" ? "textarea" : "input")
+        valueInput.dataset.type = 'value'
+        valueInput.value = obj.fields[key].value
+        col2.append(valueInput)
+
+        member.append(col1, col2)
+
+        keyInput.addEventListener('input', (e) => fetch(`/update/${obj.id}`, {
+            method: 'put',
+            headers: {'content-type': 'application/json'},
+            body: JSON.stringify({
+                key,
+                name: keyInput.value,
+                type: obj.fields[key].type,
+                value: valueInput.value,
+            })
+        }))
+
+        valueInput.addEventListener('input', (e) => fetch(`/update/${obj.id}`, {
+            method: 'put',
+            headers: {'content-type': 'application/json'},
+            body: JSON.stringify({
+                key,
+                name: keyInput.value,
+                type: obj.fields[key].type,
+                value: valueInput.value
+            })
+        }))
+
+        return member;
+    }
+
+    function inspectObject(id) {
+        return () => {
+            var xx = null, yy = 0, x = 0, y = 0;
+            const obj = memoryTable[id]
+            const menu = document.createElement("div")
+            const updatePos = (e) => {
+                let el = e.target
+                while (el.id.indexOf('menu-') !== 0) el = el.parentNode
+
+                x = xx - e.clientX;
+                y = yy - e.clientY;
+                el.dataset.xx = xx = e.clientX;
+                el.dataset.yy = yy = e.clientY;
+
+                el.style.top = (el.offsetTop - y) + "px";
+                el.style.left = (el.offsetLeft - x) + "px";
+
+            }
+            menu.addEventListener('mousedown', (e) => {
+                if (['input', 'textarea'].indexOf(e.target.localName) >= 0) return;
+                xx = e.clientX;
+                yy = e.clientY;
+                window.addEventListener('mousemove', updatePos)
+                menu.addEventListener('mouseup', () => window.removeEventListener('mousemove', updatePos))
+            })
+            menu.classList.add('menu')
+            menu.style.zIndex = '100'
+            menu.style.position = 'fixed'
+            menu.style.border = '1px solid red'
+            menu.id = 'menu-' + id
+
+            const existingMenu = document.getElementById(menu.id)
+            if (existingMenu) {
+                menu.style.top = existingMenu.style.top;
+                menu.style.left = existingMenu.style.left;
+                existingMenu.remove()
+            }
+
+            const memberTable = document.createElement("table")
+            const fieldKeys = Object.keys(obj.fields)
+            const fields = fieldKeys.map(key => createMemberRow(obj, key))
+
+            const objectTag = document.createElement("span")
+            objectTag.innerText = 'id: ' + id
+
+            const close = document.createElement("button")
+            close.innerText = 'X'
+            close.addEventListener("click", () => menu.remove())
+
+            const clone = document.createElement("button")
+            clone.innerText = 'clone'
+            clone.addEventListener("click", () => fetch(`/clone/${id}`, {method: 'put',}).then(syncTable))
+
+            const addField = document.createElement("button")
+            addField.innerText = 'add field'
+            addField.addEventListener(
+                'click',
+                () => fetch(`/update/${id}`, {
+                    method: 'put',
+                    headers: {'content-type': 'application/json'},
+                    body: JSON.stringify({'key': fieldKeys.length, 'name': '', 'type': 'value', 'value': ''})
+                }).then(syncTable)
+            )
+
+            memberTable.append(...fields)
+            menu.append(close, objectTag, clone, addField, memberTable)
+            document.body.append(menu)
+        }
+    }
+
+    syncTable()
+
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spagetti", "Spagetti\Spagetti.csproj", "{D6253A77-081E-46B9-BF09-71611B3ACD46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefinedBoundaries", "DefinedBoundaries\DefinedBoundaries.csproj", "{8F56225A-E77C-4364-BD73-D381CCA06A55}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D6253A77-081E-46B9-BF09-71611B3ACD46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6253A77-081E-46B9-BF09-71611B3ACD46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6253A77-081E-46B9-BF09-71611B3ACD46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6253A77-081E-46B9-BF09-71611B3ACD46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F56225A-E77C-4364-BD73-D381CCA06A55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F56225A-E77C-4364-BD73-D381CCA06A55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F56225A-E77C-4364-BD73-D381CCA06A55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F56225A-E77C-4364-BD73-D381CCA06A55}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

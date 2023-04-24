@@ -1,0 +1,16 @@
+<div>
+  <label>User Id:</label>
+  <input [(ngModel)]="userId"/>
+  <button (click)="promote()">Promote</button>
+</div>
+
+<div *ngFor="let project of projects">
+  <h4>Project {{project.id}}</h4>
+  <ul>
+    <li *ngFor="let task of project.tasks">{{task.title}}</li>
+  </ul>
+
+  <button (click)="addUser(project.id)">Add User</button>
+</div>
+
+

@@ -1,0 +1,23 @@
+@page
+@model WebApp.Pages.Index
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<div>
+    @if (!string.IsNullOrEmpty(Model.Message))
+    {
+        @* @Html.Raw(Model.Message) *@
+        @Model.Message
+    }
+</div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+encodeURIComponent(`<script>alert('injected!')</script>`) 
+    => %3Cscript%3Ealert('injected!')%3C%2Fscript%3E
+   
+encodeURIComponent(`<img src onerror="alert('injected!')"/>`)
+    => %3Cimg%20src%20onerror%3D%22alert('injected!')%22%2F%3E

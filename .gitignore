@@ -1,0 +1,12 @@
+.vs
+.idea
+bin
+obj
+node_modules
+BenchmarkDotNet.Artifacts
+.DS_Store
+venv
+*.egg-info
+__pycache__
+WebScraping/**/build
+WebScraping/**/dist

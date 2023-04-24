@@ -1,0 +1,41 @@
+@page
+@model WebApp.Pages.ViaSignalR
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<div>
+
+    <ul id="messages">
+
+    </ul>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.4/signalr.min.js"></script>
+    <script>
+        const connection = new signalR.HubConnectionBuilder().withUrl("/chat").build();
+        
+        connection.on("accept_message", function (message) {
+            const li = document.createElement("li");
+            // li.textContent = message;
+            li.innerHTML = message;
+            
+            document.getElementById("messages").appendChild(li);
+        });
+        
+        connection.start().catch((err)  => console.error(err.toString()))
+        
+        function send(msg){
+            return connection.invoke("SendMessage", msg)
+        }
+    </script>
+</div>
+</body>
+</html>

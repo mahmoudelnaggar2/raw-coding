@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <input id="number">
+</div>
+<div>
+    <textarea id="plan"></textarea>
+</div>
+<div>
+    <button onclick="submit()">COMPUTE</button>
+</div>
+<div id="result">
+
+</div>
+<script>
+    function submit() {
+        return fetch("/compute", {
+            method: "post",
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({
+                number: parseInt(document.getElementById("number").value),
+                operationDescription: document.getElementById("plan").value
+            })
+        }).then(r => r.json())
+            .then(j => document.getElementById("result").innerText = `Result: ${j.number}`)
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+﻿api.company.local {
+    reverse_proxy localhost:5041 {
+        header_down +Set-Cookie ".AspNetCore.Cookies=CfDJ8HaFiLIsfaFLr9fBZTdCwu79XAnUJKZPu7kuEhWvPdHq6-q5Vh8YKcYvF7gLwn7ZMVvXIN1bmDcOryO9PS0X7Vgo7dl9GMGWqrBq9mt8JZYYd76ESQy1P28RH30RcjOUP8Jz4mU8Wz9ran3xYOelVsWW-hULthL-DMqLZ2KoGUULCx8W-orarjZdBKr4tc30A83e3IlPZIjJKA6B_tAWK_RNzZhHUe5tbtEqKtjZDcMqTtGzkE61g9EHICJms9G-fMTLILmgQvtTptcb47Gx7f-brDrrX5LZcDoWK7idyoxrtmO_abb_R_6o1GHGy_eysvlqK03kYwbCfgK7BeKZWGcSnflyUyBTxoTyiouNXOgFxKGHG1gsr3R4tqAHYnQhTpzvK-UsYqsQvfUe7ch9TWlWCuWNCgUjax-NhYQsQtgAGrkEX8_8sR7MdpleUIpgYj8NJhFbekHRmhG2sb3d_cU; domain=.company.local; path=/; samesite=lax; httponly"
+    }
+}
+
+app.company.local {
+    reverse_proxy localhost:3000
+}
+
+evil.local {
+    reverse_proxy localhost:5216
+}

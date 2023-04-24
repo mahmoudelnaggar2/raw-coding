@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stateless", "Stateless\Stateless.csproj", "{3DA68D31-AB81-4629-97C7-E2A264E43F65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stateful", "Stateful\Stateful.csproj", "{475CEB62-98ED-4A19-BF60-B3191314430D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3DA68D31-AB81-4629-97C7-E2A264E43F65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DA68D31-AB81-4629-97C7-E2A264E43F65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DA68D31-AB81-4629-97C7-E2A264E43F65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DA68D31-AB81-4629-97C7-E2A264E43F65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{475CEB62-98ED-4A19-BF60-B3191314430D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{475CEB62-98ED-4A19-BF60-B3191314430D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{475CEB62-98ED-4A19-BF60-B3191314430D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{475CEB62-98ED-4A19-BF60-B3191314430D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

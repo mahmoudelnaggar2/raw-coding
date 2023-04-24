@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PingPonger", "PingPonger", "{CB0AB658-8B64-4D92-9FD2-689A7CF0D494}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pinger", "PingPonger\Pinger\Pinger.csproj", "{151BFF0A-63E6-4B90-A639-70BA3E8E59AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ponger", "PingPonger\Ponger\Ponger.csproj", "{58A2A03B-D7EC-4C33-BB64-DBE6CFFE8A00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WolvenatoR", "WolvenatoR\WolvenatoR.csproj", "{C36223C6-FC30-4FA0-9572-7F41F2AF4B5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messages", "PingPonger\Messages\Messages.csproj", "{B0739185-1020-4A14-84A2-C3CDAF6B7FAF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{151BFF0A-63E6-4B90-A639-70BA3E8E59AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{151BFF0A-63E6-4B90-A639-70BA3E8E59AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{151BFF0A-63E6-4B90-A639-70BA3E8E59AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{151BFF0A-63E6-4B90-A639-70BA3E8E59AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58A2A03B-D7EC-4C33-BB64-DBE6CFFE8A00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58A2A03B-D7EC-4C33-BB64-DBE6CFFE8A00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58A2A03B-D7EC-4C33-BB64-DBE6CFFE8A00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58A2A03B-D7EC-4C33-BB64-DBE6CFFE8A00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C36223C6-FC30-4FA0-9572-7F41F2AF4B5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C36223C6-FC30-4FA0-9572-7F41F2AF4B5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C36223C6-FC30-4FA0-9572-7F41F2AF4B5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C36223C6-FC30-4FA0-9572-7F41F2AF4B5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0739185-1020-4A14-84A2-C3CDAF6B7FAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0739185-1020-4A14-84A2-C3CDAF6B7FAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0739185-1020-4A14-84A2-C3CDAF6B7FAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0739185-1020-4A14-84A2-C3CDAF6B7FAF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{151BFF0A-63E6-4B90-A639-70BA3E8E59AD} = {CB0AB658-8B64-4D92-9FD2-689A7CF0D494}
+		{58A2A03B-D7EC-4C33-BB64-DBE6CFFE8A00} = {CB0AB658-8B64-4D92-9FD2-689A7CF0D494}
+		{B0739185-1020-4A14-84A2-C3CDAF6B7FAF} = {CB0AB658-8B64-4D92-9FD2-689A7CF0D494}
+	EndGlobalSection
+EndGlobal

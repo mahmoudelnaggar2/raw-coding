@@ -1,0 +1,41 @@
+@page
+@model WebApp.Pages.ViaJs
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<div>
+    
+    <div id="target">
+        
+    </div>
+
+    <script>
+        const target = document.getElementById('target')        
+        const result = (/message=(.+)/g.exec(window.location.href))[1]
+        const message = decodeURIComponent(result)
+        target.innerHTML = `<p>${message}</p>`
+        
+        async function fetchUserSecure(){
+            const user = await fetch("/api/user").then(r => r.json())
+            const img = document.createElement('img')
+            img.setAttribute('src', user.image)
+            target.append(img)
+        }
+        
+        async function fetchUserUnSecure(){
+            const user = await fetch("/api/user").then(r => r.json())
+            target.innerHTML = `<img src="${user.image}" />`
+        }
+    </script>
+</div>
+</body>
+</html>
